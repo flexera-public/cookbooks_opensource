@@ -22,12 +22,19 @@ if ["centos", "redhat", "fedora"].include? node[:platform]
   exit(1)
 end
 
-if node[:mongodb][:release] != 'default'
+# mongodb is part of the default ubuntu repository as of 10.04
+if node[:mongodb][:release] == 'stable' && node[:platform_version] == '10.04'
+  package "mongodb"
+else
   template "/etc/apt/sources.list.d/mongo_sources.list" do
     source "mongo_sources.list"
   end
 # can be 'stable', 'unstable', or 'snapshot'
+  bash "add_mongo_apt_key_and_update" do
+    code <<-EOH
+      apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+      apt-get update
+    EOH
+  end
   package "mongodb-#{node[:mongodb][:release]}"
-else
-  package "mongodb"
 end
