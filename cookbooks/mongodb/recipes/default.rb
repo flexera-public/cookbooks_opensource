@@ -17,11 +17,9 @@
 # limitations under the License.
 #
 
-if ["centos", "redhat", "fedora"].include? [node[:platform]
-  Chef::Log.error("ERROR: this cookbook only supports Ubuntu at this time")
+if ["centos", "redhat", "fedora"].include? node[:platform]
+  Chef::Log.info("ERROR: this cookbook only supports Ubuntu at this time")
   exit(1)
 end
 
-package "mongodb" do
-  action :install
-end
+package "mongodb"
