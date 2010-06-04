@@ -17,6 +17,31 @@
     "groupings": {
     },
     "attributes": {
+      "mongodb": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "hash",
+        "recipes": [
+
+        ],
+        "display_name": "MongoDB"
+      },
+      "mongodb/release": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+          "mongodb::default"
+        ],
+        "description": "By default this recipe will install the default Ubuntu package.  To override: Set this attribute to use newer sources direct from mongodb.  Valid values are 'stable', 'unstable', or 'snapshot').",
+        "display_name": "MongoDB new releases"
+      }
     },
     "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
     "recommendations": {

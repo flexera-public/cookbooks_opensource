@@ -22,4 +22,12 @@ if ["centos", "redhat", "fedora"].include? node[:platform]
   exit(1)
 end
 
-package "mongodb"
+if node[:mongodb][:release] != 'default'
+  template "/etc/apt/sources.list.d/mongo_sources.list" do
+    source "mongo_sources.list"
+  end
+# can be 'stable', 'unstable', or 'snapshot'
+  package "mongodb-#{node[:mongodb][:release]}"
+else
+  package "mongodb"
+end
