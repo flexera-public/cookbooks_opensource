@@ -1,0 +1,30 @@
+{
+    "license": "Apache 2.0",
+    "maintainer_email": "opensource@rightscale.com",
+    "conflicting": {
+    },
+    "recipes": {
+      "mongodb::default": "installs MongoDB"
+    },
+    "providing": {
+    },
+    "description": "Installs/Configures mongodb",
+    "replacing": {
+    },
+    "platforms": {
+    },
+    "version": "0.1.0",
+    "groupings": {
+    },
+    "attributes": {
+    },
+    "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
+    "recommendations": {
+    },
+    "dependencies": {
+    },
+    "name": "mongodb",
+    "maintainer": "RightScale opensource",
+    "suggestions": {
+    }
+  }
