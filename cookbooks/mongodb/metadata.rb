@@ -12,5 +12,6 @@ attribute "mongodb/release",
   :display_name => "MongoDB new releases", 
   :description => "By default this recipe will install the default Ubuntu package.  To override: Set this attribute to use newer sources direct from mongodb.  Valid values are 'stable', 'unstable', or 'snapshot').", 
   :required => false, 
-  :recipes => ["mongodb::default"]
+  :recipes => ["mongodb::default"],
+  :choice => ['stable', 'unstable', 'snapshot']
 
