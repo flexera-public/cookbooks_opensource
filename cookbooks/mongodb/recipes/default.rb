@@ -16,3 +16,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+if ["centos", "redhat", "fedora"].include? [node[:platform]
+  Chef::Log.error("ERROR: this cookbook only supports Ubuntu at this time")
+  exit(1)
+end
+
+package "mongodb" do
+  action :install
+end
