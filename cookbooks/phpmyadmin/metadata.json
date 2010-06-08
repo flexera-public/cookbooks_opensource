@@ -1,0 +1,30 @@
+{
+    "version": "0.1.0",
+    "providing": {
+    },
+    "attributes": {
+    },
+    "replacing": {
+    },
+    "dependencies": {
+    },
+    "groupings": {
+    },
+    "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
+    "recommendations": {
+    },
+    "license": "Apache 2.0",
+    "maintainer": "Example Com",
+    "suggestions": {
+    },
+    "name": "phpmyadmin",
+    "maintainer_email": "ops@example.com",
+    "recipes": {
+      "phpmyadmin::default": "Installs phpmyadmin"
+    },
+    "conflicting": {
+    },
+    "platforms": {
+    },
+    "description": "Installs/Configures phpmyadmin"
+  }
