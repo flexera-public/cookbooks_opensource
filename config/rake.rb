@@ -3,26 +3,26 @@
 ###
 
 # The company name - used for SSL certificates, and in srvious other places
-COMPANY_NAME = "Example Com"
+COMPANY_NAME = "RightScale, Inc."
 
 # The Country Name to use for SSL Certificates
 SSL_COUNTRY_NAME = "US"
 
 # The State Name to use for SSL Certificates
-SSL_STATE_NAME = "Several"
+SSL_STATE_NAME = "CA"
 
 # The Locality Name for SSL - typically, the city
-SSL_LOCALITY_NAME = "Locality"
+SSL_LOCALITY_NAME = "Santa Barbara"
 
 # What department?
-SSL_ORGANIZATIONAL_UNIT_NAME = "Operations"
+SSL_ORGANIZATIONAL_UNIT_NAME = "Community"
 
 # The SSL contact email address
-SSL_EMAIL_ADDRESS = "ops@example.com"
+SSL_EMAIL_ADDRESS = "opensource@rightscale.com"
 
 # License for new Cookbooks
 # Can be :apachev2 or :none
-NEW_COOKBOOK_LICENSE = :apachev2
+NEW_COOKBOOK_LICENSE = :none
 
 ##########################
 # Chef Repository Layout #
