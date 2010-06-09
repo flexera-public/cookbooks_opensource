@@ -1,0 +1,28 @@
+maintainer       "RightScale, Inc."
+maintainer_email "cary@rightscale.com"
+license          IO.read(File.join(File.dirname(__FILE__), '..', '..', 'LICENSE'))
+description      "Installs/Configures dropbox"
+version          "0.1"
+
+supports 'ubuntu'
+
+recipe "dropbox::default", "Install dropbox and register instance."
+
+attribute "dropbox",
+  :display_name => "Dropbox Application Settings",
+  :type => "hash"
+  
+#
+# required attributes
+#
+attribute "dropbox/email",
+  :display_name => "Dropbox User Email",
+  :description => "Email address linked to your dropbox account.",
+  :required => true,
+  :recipes => [ "dropbox::default" ]
+
+attribute "dropbox/password",
+  :display_name => "Dropbox Password",
+  :description => "Passwod for your dropbox user account.",
+  :required => true,
+  :recipes => [ "dropbox::default" ]
