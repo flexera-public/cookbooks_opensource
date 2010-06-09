@@ -16,5 +16,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+package "debconf-utils"
+
+template "/tmp/phpmyadmin.seed" do
+  source "phpmyadmin.seed.erb"
+end
+
+bash "set_seeds" do
+  code <<EOH-
+  debconf-set-selections /tmp/phpmyadmin.seed
+EOH
+end
 
 package "phpmyadmin"
+
+

@@ -3,6 +3,57 @@
     "providing": {
     },
     "attributes": {
+      "phpmyadmin/mysql_host": {
+        "required": "required",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+          "phpmyadmin::default"
+        ],
+        "display_name": "phpmyadmin",
+        "description": "The FQDN of the mysql server you would like to use and administrate"
+      },
+      "phpmyadmin": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "hash",
+        "recipes": [
+
+        ],
+        "display_name": "phpmyadmin"
+      },
+      "db/admin/password": {
+        "required": "required",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+          "phpmyadmin::default"
+        ],
+        "display_name": "Database Admin Password",
+        "description": "The password of the database user that has 'admin' privileges."
+      },
+      "db/admin/user": {
+        "required": "required",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+          "phpmyadmin::default"
+        ],
+        "display_name": "Database Admin Username",
+        "description": "The username of the database user that has 'admin' privileges."
+      }
     },
     "replacing": {
     },
