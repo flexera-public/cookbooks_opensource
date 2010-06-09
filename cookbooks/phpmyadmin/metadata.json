@@ -13,7 +13,7 @@
         "recipes": [
           "phpmyadmin::default"
         ],
-        "display_name": "phpmyadmin",
+        "display_name": "MySQL host name",
         "description": "The FQDN of the mysql server you would like to use and administrate"
       },
       "phpmyadmin": {

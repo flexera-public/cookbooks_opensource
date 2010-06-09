@@ -10,7 +10,7 @@ recipe           "phpmyadmin::default", "Installs phpmyadmin"
 attribute "phpmyadmin", :display_name => "phpmyadmin", :type => "hash"
 
 attribute "phpmyadmin/mysql_host", 
-  :display_name => "phpmyadmin", 
+  :display_name => "MySQL host name", 
   :description => "The FQDN of the mysql server you would like to use and administrate", 
   :required => true, 
   :recipes => ["phpmyadmin::default"]

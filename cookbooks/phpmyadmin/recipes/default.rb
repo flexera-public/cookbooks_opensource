@@ -23,7 +23,7 @@ template "/tmp/phpmyadmin.seed" do
 end
 
 bash "set_seeds" do
-  code <<EOH-
+  code <<EOH
   debconf-set-selections /tmp/phpmyadmin.seed
 EOH
 end
