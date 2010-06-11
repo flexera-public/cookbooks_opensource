@@ -1,0 +1,6 @@
+== RightScale OpenSource
+These cookbooks are a part of RightScale's OpenSource ServerTemplates.  Please see the following resources for more information:
+
+* The {RightScale forum}[http://forums.rightscale.com/forumdisplay.php?f=37]
+* The #rightscale channel on Freenode IRC
+* Code contributions and issue reporting are welcome on Github.
